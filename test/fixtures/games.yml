@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  year_of_release: 1
+  genre: one
+  publisher: one
+  developer: one
+  platform: one
+  rating: one
+
+two:
+  name: MyString
+  year_of_release: 1
+  genre: two
+  publisher: two
+  developer: two
+  platform: two
+  rating: two

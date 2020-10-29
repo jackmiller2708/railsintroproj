@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: one
+  critic_score: 9.99
+  user_score: 9.99
+
+two:
+  game: two
+  critic_score: 9.99
+  user_score: 9.99
