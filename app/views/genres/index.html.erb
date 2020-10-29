@@ -1,0 +1,5 @@
+<h1>All Genre</h1>
+
+<% @genre.each do |genre| %>
+  <p><%= link_to genre.name, genre_path(genre) %> (<%= Game.where(genre_id: genre.id).count %>)</p>
+<% end %>
