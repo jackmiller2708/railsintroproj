@@ -1,3 +1,19 @@
-<% @publisher.each do |game| %>
-  <p><%= link_to game.name, game_path(game) %></p>
-<% end %>
+<h1><%= Publisher.find(@publisher[0].publisher_id).name %>'s Games</h1>
+<h4><%=link_to "Back to Publisher List", publishers_path %></h4>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>Title</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @publisher.each do |game| %>
+    <tr>
+      <td><%= game.name %></td>
+      <td><%= link_to 'Show', game_path(game) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<h4><%=link_to "Back to Publisher List", publishers_path %></h4>

@@ -1,3 +1,20 @@
-<% @genre.each do |game| %>
-  <p><%= game.name %></p>
-<% end %>
+<h1><%= Genre.find(@genre[0].genre_id ).name %> Games</h1>
+
+<h4><%=link_to "Back to Genre List", genres_path %></h4>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>Title</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @genre.each do |game| %>
+    <tr>
+      <td><%= game.name %></td>
+      <td><%= link_to 'Show', game_path(game) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<h4><%=link_to "Back to Genre List", genres_path %></h4>
