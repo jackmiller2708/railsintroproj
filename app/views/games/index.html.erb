@@ -1,15 +1,22 @@
 <h1>Listing all Games</h1>
+
 <%=paginate  @game %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th></th>
-  </tr>
-  <%  @game.each do |game| %>
-    <tr>
-      <td><%= game.name %></td>
-      <td><%= link_to 'Show', game_path(game) %></td>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr scope="col">
+      <th>Title</th>
+      <th></th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <%  @game.each do |game| %>
+      <tr>
+        <td><%= game.name %></td>
+        <td><%= link_to 'Show', game_path(game) %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
 <%=paginate  @game %>

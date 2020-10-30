@@ -1,17 +1,19 @@
 <h1><%=@game.name %> - <%= @game.year_of_release %></h1>
-<!--===========================-->
+
 <p>Genre: <%= @game.genre.name %></p>
-<!--===================================-->
+
 <% if @game.developer %>
   <p>Developer: <%= @game.developer.name %></p>
 <% else %>
   <p>Developer: N/A</p>
 <% end %>
-<!--===================================-->
+
 <p>Publisher: <%= @game.publisher.name %></p>
-<!--===================================-->
+
 <% if @game.rating %>
   <p>Rating: <%=@game.rating.rating %></p>
   <% else %>
   <p>Rating: Unrated</p>
 <% end %>
+
+<%= link_to "Back to game list", games_path %>

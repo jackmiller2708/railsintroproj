@@ -1,3 +1,5 @@
+<h1>All Publishers</h1>
+
 <% @publisher.each do |game| %>
   <p><%=link_to game.publisher.name, publisher_path(game.publisher)%> (<%= Game.where(publisher_id: game.publisher.id).count %>)</p>
 <% end %>
